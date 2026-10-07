@@ -1,0 +1,1049 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f7f7 0%,
+            #eeeeee 100%
+        );
+
+    font-family: Arial, sans-serif;
+
+    color: #222;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.dashboard-container {
+
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 45px 35px;
+
+}
+
+
+/* =========================================
+   TOPO
+========================================= */
+
+.dashboard-topo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.dashboard-mini-titulo {
+
+    display: inline-block;
+
+    color: #F29F05;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.dashboard-titulo h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    color: #202020;
+
+}
+
+
+.dashboard-titulo p {
+
+    margin: 7px 0 0;
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.dashboard-botoes {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.btn-voltar {
+
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    background-color: white;
+
+    color: #333;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-voltar:hover {
+
+    background-color: #eeeeee;
+
+    color: #222;
+
+}
+
+
+.btn-sair {
+
+    display: inline-block;
+
+    padding: 11px 23px;
+
+    background-color: #dc3545;
+
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-sair:hover {
+
+    background-color: #bb2d3b;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.dashboard-card {
+
+    background-color: white;
+
+    min-height: 205px;
+
+    padding: 24px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e7e7e7;
+
+    border-top: 4px solid #F29F05;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.09);
+
+}
+
+
+/* =========================================
+   CABEÇALHO DO CARD
+========================================= */
+
+.card-cabecalho {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.card-icone {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 11px;
+
+    background-color: #fff3dc;
+
+    font-size: 21px;
+
+}
+
+
+.card-tag {
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background-color: #f3f3f3;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   TEXTO DOS CARDS
+========================================= */
+
+.dashboard-card-titulo {
+
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.dashboard-card-valor {
+
+    margin: 0;
+
+    color: #202020;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+}
+
+
+.dashboard-card-valor.valor {
+
+    font-size: 28px;
+
+}
+
+
+.card-legenda {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: #999;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   ESTOQUE CRÍTICO
+========================================= */
+
+.card-alerta {
+
+    border-top-color: #dc3545;
+
+}
+
+
+.icone-alerta {
+
+    background-color: #fff0f0;
+
+}
+
+
+.tag-alerta {
+
+    background-color: #fff0f0;
+
+    color: #dc3545;
+
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.dashboard-inferior {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================
+   DESTAQUE
+========================================= */
+
+.dashboard-destaque {
+
+    min-height: 215px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F29F05,
+            #df8700
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 22px rgba(242, 159, 5, 0.20);
+
+}
+
+
+.dashboard-destaque::after {
+
+    content: "★";
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: -55px;
+
+    font-size: 170px;
+
+    color: white;
+
+    opacity: 0.08;
+
+}
+
+
+.destaque-icone {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background-color:
+        rgba(255, 255, 255, 0.18);
+
+    font-size: 29px;
+
+}
+
+
+.destaque-conteudo {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.destaque-label {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.dashboard-destaque h2 {
+
+    margin: 7px 0 8px;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+}
+
+
+.dashboard-destaque-produto {
+
+    margin: 0;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================
+   ACESSO RÁPIDO
+========================================= */
+
+.dashboard-acesso {
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.dashboard-acesso h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.dashboard-acesso > p {
+
+    margin: 6px 0 18px;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+.acesso-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.acesso-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+
+.acesso-links a span {
+
+    font-size: 17px;
+
+}
+
+
+.acesso-links a strong {
+
+    margin-left: auto;
+
+    color: #F29F05;
+
+    font-size: 17px;
+
+}
+
+
+.acesso-links a:hover {
+
+    background-color: #fff5e3;
+
+    border-color: #F29F05;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .dashboard-cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .dashboard-inferior {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .dashboard-container {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .dashboard-topo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+
+    .dashboard-botoes {
+
+        width: 100%;
+
+    }
+
+
+    .btn-voltar,
+    .btn-sair {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+
+    .dashboard-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dashboard-titulo h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .dashboard-destaque {
+
+        padding: 25px;
+
+    }
+
+}
+/* =========================================
+   CORREÇÕES VISUAIS DO DASHBOARD
+========================================= */
+
+
+/* BOTÕES DO TOPO */
+
+.dashboard-botoes {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+
+.btn-voltar {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 11px 20px !important;
+
+    background-color: #6c757d !important;
+    color: white !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    text-decoration: none !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+    transition: 0.2s !important;
+}
+
+
+.btn-voltar:hover {
+    background-color: #5c636a !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+.btn-sair {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 11px 23px !important;
+
+    background-color: #dc3545 !important;
+    color: white !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    text-decoration: none !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+    transition: 0.2s !important;
+}
+
+
+.btn-sair:hover {
+    background-color: #bb2d3b !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+/* =========================================
+   ACESSO RÁPIDO
+========================================= */
+
+.dashboard-acesso {
+    padding: 25px !important;
+
+    background-color: white !important;
+
+    border: 1px solid #e7e7e7 !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06) !important;
+
+    font-family: Arial, sans-serif !important;
+}
+
+
+.dashboard-acesso h2 {
+    margin: 0 !important;
+
+    color: #222 !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 20px !important;
+
+    font-weight: 700 !important;
+
+    font-style: normal !important;
+}
+
+
+.dashboard-acesso > p {
+    margin: 6px 0 18px !important;
+
+    color: #888 !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================
+   LINKS DO ACESSO RÁPIDO
+========================================= */
+
+.acesso-links {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 9px !important;
+}
+
+
+.acesso-links a {
+    display: flex !important;
+
+    align-items: center !important;
+
+    width: 100% !important;
+
+    gap: 12px !important;
+
+    padding: 12px 14px !important;
+
+    background-color: #fafafa !important;
+
+    border: 1px solid #e9e9e9 !important;
+
+    border-radius: 9px !important;
+
+    color: #333 !important;
+
+    text-decoration: none !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 14px !important;
+
+    font-weight: 600 !important;
+
+    transition: all 0.2s ease !important;
+}
+
+
+.acesso-links a:hover {
+    background-color: #fff5e3 !important;
+
+    border-color: #F29F05 !important;
+
+    color: #222 !important;
+
+    transform: translateX(3px) !important;
+
+    text-decoration: none !important;
+}
+
+
+.acesso-links a span {
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    width: 28px !important;
+
+    height: 28px !important;
+
+    flex-shrink: 0 !important;
+
+    background-color: #fff0d2 !important;
+
+    border-radius: 7px !important;
+
+    font-size: 16px !important;
+}
+
+
+.acesso-links a strong {
+    margin-left: auto !important;
+
+    color: #F29F05 !important;
+
+    font-size: 18px !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================
+   AJUSTE DO DESTAQUE
+========================================= */
+
+.dashboard-destaque {
+    min-height: 215px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 22px !important;
+}
+
+
+.dashboard-destaque-produto {
+    color: white !important;
+
+    font-size: 27px !important;
+
+    font-weight: 800 !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================
+   AJUSTE DOS CARDS
+========================================= */
+
+.dashboard-card {
+    overflow: hidden !important;
+}
+
+
+.dashboard-card-valor {
+    color: #202020 !important;
+
+    font-family: Arial, sans-serif !important;
+}
+
+
+.dashboard-card-titulo {
+    font-family: Arial, sans-serif !important;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .dashboard-inferior {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .dashboard-container {
+        padding: 30px 18px !important;
+    }
+
+    .dashboard-topo {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+    }
+
+    .dashboard-botoes {
+        width: 100% !important;
+    }
+
+    .btn-voltar,
+    .btn-sair {
+        flex: 1 !important;
+        text-align: center !important;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+.dashboard-criticos {
+    margin-top: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.criticos-cabecalho h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.criticos-cabecalho p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.lista-criticos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto-critico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.produto-critico div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.produto-critico span {
+    font-size: 13px;
+    color: #777;
+}
+
+.produto-critico > strong {
+    font-size: 14px;
+}
+
+.sem-criticos {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    color: #777;
+}

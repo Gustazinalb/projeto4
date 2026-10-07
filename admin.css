@@ -1,0 +1,191 @@
+.admin-container{
+
+    min-height:85vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:url("img/fundo.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:40px;
+
+}
+
+.login-card{
+
+    width:480px;
+
+    background:#111;
+
+    border:1px solid #d18b00;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0px 0px 25px rgba(0,0,0,.6);
+
+}
+
+.logo-admin{
+
+    width:110px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.login-card h1{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:5px;
+
+}
+
+.login-card h1 span{
+
+    color:#F29F05;
+
+}
+
+.login-card h3{
+
+    text-align:center;
+
+    color:#F29F05;
+
+    margin-bottom:40px;
+
+    font-weight:400;
+
+}
+
+.campo{
+
+    margin-bottom:25px;
+
+}
+
+.campo label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #444;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    background:#1b1b1b;
+
+}
+
+.input-box i{
+
+    color:#F29F05;
+
+    padding:15px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+#mostrarSenha{
+
+    padding-right:15px;
+
+    cursor:pointer;
+
+    color:#999;
+
+}
+
+.botao-login{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#F29F05;
+
+    border:none;
+
+    border-radius:8px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.botao-login:hover{
+
+    background:#cf8500;
+
+}
+
+.restrito{
+
+    text-align:center;
+
+    color:#d9a33d;
+
+    margin-top:30px;
+
+}
+
+@media(max-width:600px){
+
+.login-card{
+
+    width:100%;
+
+}
+
+}

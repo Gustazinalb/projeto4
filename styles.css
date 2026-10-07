@@ -1,0 +1,705 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #F29F05;
+    display: flex;
+    align-items: center; /* centraliza vertical */
+    justify-content: space-between; /* separa esquerda e direita */
+    padding: 0 40px;
+    height: 100px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.logo img{
+    height: 80px; /* controla o tamanho */
+    width: auto;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #8C4303;
+    font-size: 40px;
+    transition: 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Efeito hover */
+.menu li a:hover{
+    color:rgb(0, 0, 0);
+}
+body{
+    background-color: #ffb300;
+}
+main{
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.85)
+        ),
+        url("img/fundo.png");
+
+    background-size: cover;
+    background-position: center;
+}
+.container {
+  display: grid;
+  /* Define 3 colunas de tamanhos iguais (1 fração de espaço) */
+  grid-template-columns: repeat(4, 1fr);
+  /* Adiciona espaçamento de 10px entre os itens */
+  gap: 30px;
+  padding:15px;
+}
+.item {
+  background-color: #8C4303;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 15px;
+  h2{
+    font-weight: bold;
+        font-size: 35px;
+        color: #ffffff;
+  }
+}
+.item h2:hover{
+    color: black;
+    transition-duration: 0.5s;
+}
+.cabeçalio{
+    text-align: center;
+    
+    padding: 15px;
+    h2{
+        font-weight: bold;
+        font-size: 35px;
+        color: #ffffff;
+    }
+}
+/* Exemplo CSS */
+.container-grid {
+  display: grid; /* 1. Define o contêiner */
+  margin: 10px 30px 0 30px;
+  /* 2. Cria 3 colunas de tamanhos iguais (1 fração cada) */
+  grid-template-columns: repeat(7, 1fr); 
+  
+  /* 3. Adiciona espaçamento entre os itens */
+  gap: 10px; 
+}
+
+.item {
+  background-color: #8C4303;
+  padding: 15px;
+  text-align: center;
+}
+.cronograma{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: black;
+    margin-top: 5px;
+}
+
+.grid-eventos{
+    display: grid;
+    grid-template-columns: repeat( 7, 1fr);
+    margin: 10px;
+    gap: 20px;
+}
+
+.card{
+    background: #7a3a00;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #5a2400;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.topo-card{
+    background: rgba(0,0,0,0.15);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.topo-card h2{
+    font-size: 36px;
+}
+
+.topo-card span{
+    font-size: 20px;
+}
+
+.conteudo-card{
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icone{
+    font-size: 70px;
+    color: #ffb300;
+    margin-bottom: 10px;
+}
+
+.conteudo-card h4{
+    font-size: 32px;
+    color: #ffb300;
+}
+
+.conteudo-card h3{
+    font-size: 34px;
+}
+
+.conteudo-card p{
+    font-size: 22px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.conteudo-card strong{
+    color: #ffb300;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+@media(max-width: 768px){
+
+    body{
+        padding: 20px;
+    }
+
+    .cronograma h1{
+        font-size: 40px;
+    }
+
+    .topo-card h2{
+        font-size: 28px;
+    }
+
+    .conteudo-card h3{
+        font-size: 28px;
+    }
+
+    .conteudo-card p{
+        font-size: 18px;
+    }
+
+}
+/* ---------- HOME ---------- */
+
+main div{
+    position: relative;
+}
+
+main div img{
+    display: block;
+    width: 100%;
+}
+
+/* BOTÕES */
+
+.botao{
+    position: absolute;
+    bottom: 90px;
+
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* botão preenchido */
+
+.botao-laranja{
+    background: #f39c12;
+    color: rgb(0, 0, 0);
+
+    left: 80px;
+}
+
+.botao-laranja:hover{
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* botão transparente */
+
+.botao-borda{
+    border: 3px solid #f39c12;
+    color: #f39c12;
+    background: transparent;
+
+    left: 350px;
+}
+
+.botao-borda:hover{
+    border: 3px solid #000000;
+    background: #ffffff;
+    transform: scale(1.05);
+    color: black
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    background: #1c1c1c;
+    color: white;
+
+    padding: 60px 20px 30px;
+
+    text-align: center;
+
+    border-top: 4px solid #F29F05;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.85)
+        ),
+        url("img/fundo2.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-logo h2{
+    font-size: 48px;
+    color: #F29F05;
+    letter-spacing: 4px;
+}
+
+.footer-logo p{
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 20px;
+}
+
+.footer-contato{
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.footer-contato span{
+    font-size: 18px;
+}
+
+.footer-menu{
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    transition: .3s;
+}
+
+.footer-menu a:hover{
+    color: #F29F05;
+}
+
+.footer-copy{
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    color: #999;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE GERAL */
+/* ========================================= */
+
+
+body{
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.navbar-brand img{
+    height:70px;
+    width:auto;
+}
+
+@media(max-width:768px){
+
+    .navbar-brand img{
+        height:55px;
+    }
+
+    .navbar-nav{
+        text-align:center;
+        padding-top:10px;
+        
+    }
+
+}
+
+/* ========================================= */
+/* CATÁLOGO */
+/* ========================================= */
+
+.container{
+
+    display:grid !important;
+
+    grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+    gap:20px;
+
+    padding:15px;
+}
+
+.item{
+    width:100%;
+    padding:15px;
+}
+
+.item img{
+
+    width:100%;
+
+    max-width:130px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+}
+
+.item h2{
+    font-size:26px;
+}
+
+@media(max-width:991px){
+
+    .container{
+        grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    }
+
+    .item img{
+        max-width:100px;
+    }
+
+    .item h2{
+        font-size:20px;
+    }
+
+}
+
+@media(max-width:575px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .item img{
+        max-width:90px;
+    }
+
+    .item h2{
+        font-size:18px;
+    }
+
+}
+
+/* ========================================= */
+/* CRONOGRAMA */
+/* ========================================= */
+
+.grid-eventos{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,minmax(220px,1fr));
+
+    gap:20px;
+
+    padding:20px;
+
+    margin:0;
+}
+
+@media(max-width:1200px){
+
+    .grid-eventos{
+        grid-template-columns:
+        repeat(3,minmax(220px,1fr));
+    }
+
+}
+
+@media(max-width:900px){
+
+    .grid-eventos{
+        grid-template-columns:
+        repeat(2,minmax(220px,1fr));
+    }
+
+}
+
+@media(max-width:600px){
+
+    .grid-eventos{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .topo-card h2{
+        font-size:24px;
+    }
+
+    .conteudo-card h3{
+        font-size:22px;
+    }
+
+    .conteudo-card h4{
+        font-size:20px;
+    }
+
+    .icone{
+        font-size:45px;
+    }
+
+}
+
+/* ========================================= */
+/* HOME */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .botao{
+
+        width:80%;
+
+        left:50% !important;
+
+        transform:translateX(-50%) !important;
+
+        font-size:15px;
+
+        padding:10px 15px;
+
+        text-align:center;
+    }
+
+    .botao-laranja{
+        bottom:65px;
+    }
+
+    .botao-borda{
+        bottom:10px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .botao{
+
+        width:90%;
+
+        font-size:14px;
+
+        padding:8px 12px;
+    }
+
+    .botao-laranja{
+        bottom:55px;
+    }
+
+    .botao-borda{
+        bottom:5px;
+    }
+
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .footer-logo h2{
+        font-size:30px;
+    }
+
+    .footer-logo p{
+        font-size:15px;
+    }
+
+    .footer-contato{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .footer-menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+/*================ LOGIN ADMIN ================*/
+
+.login-page{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+.login-box{
+
+    width:100%;
+    max-width:430px;
+
+    background:#1f1f1f;
+
+    border:2px solid #F29F05;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+.logo-login{
+
+    width:110px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.login-box h1{
+
+    color:#F29F05;
+
+    text-align:center;
+
+    font-size:36px;
+
+    margin-bottom:5px;
+
+}
+
+.login-box p{
+
+    color:#ddd;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.login-box .form-label{
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.login-box .form-control{
+
+    height:48px;
+
+}
+
+.botao-login{
+
+    width:100%;
+
+    height:48px;
+
+    background:#F29F05;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.botao-login:hover{
+
+    background:#d98d04;
+
+    transform:translateY(-2px);
+
+}
