@@ -119,7 +119,19 @@ function autenticarJWT()
     |--------------------------------------------------------------------------
     */
 
-    $chaveSecreta = 'BRASA_BAR_JWT_SECRET_2026';
+    $chaveSecreta = getenv('JWT_SECRET');
+
+if ($chaveSecreta === false || $chaveSecreta === '') {
+    http_response_code(500);
+    header('Content-Type: application/json; charset=utf-8');
+
+    echo json_encode([
+        'sucesso' => false,
+        'mensagem' => 'Configuração de autenticação indisponível.'
+    ], JSON_UNESCAPED_UNICODE);
+
+    exit;
+}
 
     /*
     |--------------------------------------------------------------------------

@@ -19,7 +19,11 @@ function gerarJWT($idUsuario, $email)
 {
     // Temporário para desenvolvimento local.
     // Depois vamos colocar essa chave nas variáveis de ambiente do Docker.
-    $chaveSecreta = 'BRASA_BAR_JWT_SECRET_2026';
+    $chaveSecreta = getenv('JWT_SECRET');
+
+if ($chaveSecreta === false || $chaveSecreta === '') {
+    throw new Exception('Chave JWT não configurada.');
+}
 
     $cabecalho = [
         'alg' => 'HS256',

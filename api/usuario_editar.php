@@ -4,6 +4,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 require_once '../config.php';
 require_once 'auth.php';
+require_once 'validacoes.php';
 
 try {
 
@@ -83,17 +84,17 @@ try {
     |--------------------------------------------------------------------------
     */
 
-    if (strlen($cpf) !== 11) {
+    // Valida o CPF e os seus dígitos verificadores.
+if (!validarCPF($cpf)) {
+    http_response_code(400);
 
-        http_response_code(400);
+    echo json_encode([
+        'sucesso' => false,
+        'mensagem' => 'CPF inválido.'
+    ], JSON_UNESCAPED_UNICODE);
 
-        echo json_encode([
-            'sucesso' => false,
-            'mensagem' => 'CPF inválido.'
-        ], JSON_UNESCAPED_UNICODE);
-
-        exit;
-    }
+    exit;
+}
 
     /*
     |--------------------------------------------------------------------------
