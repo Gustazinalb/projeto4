@@ -17,10 +17,9 @@ try {
     while ($categoria = $resultado->fetch_assoc()) {
 
         $categorias[] = [
-            'id_categoria' => (int) $categoria['id_categoria'],
-            'nome_categoria' => $categoria['nome_categoria'],
-            'descricao' => $categoria['descricao']
-        ];
+    'id_categoria' => (int) $categoria['id_categoria'],
+    'nome_categoria' => $categoria['nome_categoria']
+];
     }
 
     echo json_encode($categorias, JSON_UNESCAPED_UNICODE);
