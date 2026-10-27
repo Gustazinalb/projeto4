@@ -1,3 +1,5 @@
+import ResourceList from "../../components/Crud/ResourceList.jsx";
+
 export default function ProdutosList() {
-  return <main><h1>Produtos</h1></main>;
+  return <ResourceList resource="produtos" />;
 }

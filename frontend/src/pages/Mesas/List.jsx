@@ -1,3 +1,5 @@
+import ResourceList from "../../components/Crud/ResourceList.jsx";
+
 export default function MesasList() {
-  return <main><h1>Mesas</h1></main>;
+  return <ResourceList resource="mesas" />;
 }

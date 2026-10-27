@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #ffb300;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.public-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-header {
+  background-color: #f29f05;
+}
+
+.public-header .navbar-brand img {
+  width: auto;
+  height: 70px;
+  margin: 5px 10px;
+  border-radius: 50px;
+}
+
+.public-header .nav-link {
+  color: #1f1f1f;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.public-header .nav-link:hover {
+  color: #8c4303;
+}
+
+.public-header .site-search {
+  width: min(400px, 42vw);
+}
+
+.public-menu {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.public-menu .navbar-nav {
+  align-items: center;
+}
+
+.site-footer {
+  padding: 60px 20px 30px;
+  border-top: 4px solid #f29f05;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/img/fundo2.png") center / cover;
+  color: #fff;
+  text-align: center;
+}
+
+.site-footer__brand h2 {
+  color: #f29f05;
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.site-footer__brand p {
+  margin-top: 10px;
+  color: #cfcfcf;
+  font-size: 1.25rem;
+}
+
+.site-footer__contact,
+.site-footer__nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.site-footer__nav a {
+  color: #fff;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.site-footer__nav a:hover {
+  color: #f29f05;
+}
+
+.site-footer__copy {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #999;
+}
+
+.page-main {
+  flex: 1;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/img/fundo.png") center / cover fixed;
+}
+
+.page-heading {
+  padding: 24px 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.page-heading h1,
+.page-heading h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.admin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f7f7 0%, #eee 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 991.98px) {
+  .public-menu {
+    padding: 12px 0 18px;
+  }
+
+  .public-header .site-search {
+    width: 100%;
+  }
+
+  .public-menu .navbar-nav {
+    align-items: stretch;
+  }
+
+  .site-footer__contact,
+  .site-footer__nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .public-header .navbar-brand img {
+    height: 55px;
+  }
+
+  .site-footer__brand h2 {
+    font-size: 1.875rem;
+  }
+
+  .site-footer__brand p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,78 @@
+.home-page {
+  flex: 1;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/img/fundo.png") center / cover;
+}
+
+.home-hero {
+  position: relative;
+}
+
+.home-hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-hero__actions {
+  position: absolute;
+  inset: auto auto 90px 80px;
+  display: flex;
+  gap: 24px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 18px 40px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-button--orange {
+  background: #f39c12;
+  color: #000;
+}
+
+.home-button--orange:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.home-button--outline {
+  border-color: #f39c12;
+  background: transparent;
+  color: #f39c12;
+}
+
+.home-button--outline:hover {
+  border-color: #000;
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .home-hero__actions {
+    inset: auto 5% 10px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .home-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .home-button--orange {
+    margin-bottom: 0;
+  }
+}

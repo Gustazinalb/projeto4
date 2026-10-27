@@ -1,0 +1,143 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 32px 16px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/fundo.png") center / cover;
+}
+
+.auth-card {
+  width: min(480px, 100%);
+  padding: 40px;
+  border: 1px solid #d18b00;
+  border-radius: 15px;
+  background: #111;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.auth-card--form {
+  width: min(600px, 100%);
+}
+
+.auth-card__logo {
+  display: block;
+  width: 110px;
+  margin: 0 auto 20px;
+}
+
+.auth-card h1 {
+  margin-bottom: 5px;
+  font-size: 3.25rem;
+  text-align: center;
+}
+
+.auth-card h1 span,
+.auth-card h2 {
+  color: #f29f05;
+}
+
+.auth-card h2 {
+  margin-bottom: 32px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.auth-card .form-label {
+  color: #fff;
+}
+
+.auth-card .form-control {
+  border-color: #444;
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.auth-card .form-control:focus {
+  border-color: #f29f05;
+  box-shadow: 0 0 0 0.2rem rgba(242, 159, 5, 0.2);
+}
+
+.auth-card .form-control::placeholder {
+  color: #999;
+}
+
+.auth-password-field {
+  position: relative;
+}
+
+.auth-password-field .mb-3 {
+  padding-right: 42px;
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 4px;
+  bottom: 8px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: #f29f05;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 12px;
+  border-color: #f29f05 !important;
+  background: #f29f05 !important;
+  color: #fff !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.auth-submit:hover {
+  border-color: #cf8500 !important;
+  background: #cf8500 !important;
+}
+
+.auth-card__footnote,
+.auth-card__link {
+  margin: 24px 0 0;
+  color: #d9a33d;
+  text-align: center;
+}
+
+.auth-card__link {
+  color: #ddd;
+}
+
+.auth-card__link a {
+  color: #f29f05;
+}
+
+.auth-password-requirements {
+  margin: -4px 0 16px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.profile-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-form {
+  padding: 28px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 28px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,3 +1,5 @@
+import ResourceForm from "../../components/Crud/ResourceForm.jsx";
+
 export default function CategoriasForm() {
-  return <main><h1>Cadastro de categoria</h1></main>;
+  return <ResourceForm resource="categorias" />;
 }

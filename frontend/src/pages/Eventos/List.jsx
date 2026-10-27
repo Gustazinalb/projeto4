@@ -1,3 +1,5 @@
+import ResourceList from "../../components/Crud/ResourceList.jsx";
+
 export default function EventosList() {
-  return <main><h1>Eventos</h1></main>;
+  return <ResourceList resource="eventos" />;
 }

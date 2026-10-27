@@ -1,3 +1,5 @@
+import ResourceForm from "../../components/Crud/ResourceForm.jsx";
+
 export default function EventosForm() {
-  return <main><h1>Cadastro de evento</h1></main>;
+  return <ResourceForm resource="eventos" />;
 }

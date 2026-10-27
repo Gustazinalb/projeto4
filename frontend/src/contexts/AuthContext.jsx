@@ -1,4 +1,11 @@
-import { createContext, useCallback, useContext, useMemo, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import api from "../services/api.js";
 import { AUTH_STORAGE_KEY } from "../utils/authStorage.js";
 
@@ -11,7 +18,14 @@ function readStoredAuth() {
     return { token: null, user: null };
   }
 
-  const auth = JSON.parse(storedAuth);
+  let auth;
+
+  try {
+    auth = JSON.parse(storedAuth);
+  } catch {
+    localStorage.removeItem(AUTH_STORAGE_KEY);
+    return { token: null, user: null };
+  }
 
   if (
     typeof auth?.token !== "string" ||
@@ -27,6 +41,16 @@ function readStoredAuth() {
 
 export function AuthProvider({ children }) {
   const [auth, setAuth] = useState(readStoredAuth);
+
+  const logout = useCallback(() => {
+    localStorage.removeItem(AUTH_STORAGE_KEY);
+    setAuth({ token: null, user: null });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("brasa-bar:unauthorized", logout);
+    return () => window.removeEventListener("brasa-bar:unauthorized", logout);
+  }, [logout]);
 
   const login = useCallback(async (credentials) => {
     const { data } = await api.post("/login.php", credentials);
@@ -47,9 +71,16 @@ export function AuthProvider({ children }) {
     return data.usuario;
   }, []);
 
-  const logout = useCallback(() => {
-    localStorage.removeItem(AUTH_STORAGE_KEY);
-    setAuth({ token: null, user: null });
+  const updateUser = useCallback((user) => {
+    setAuth((currentAuth) => {
+      if (!currentAuth.token) {
+        return currentAuth;
+      }
+
+      const nextAuth = { ...currentAuth, user: { ...currentAuth.user, ...user } };
+      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(nextAuth));
+      return nextAuth;
+    });
   }, []);
 
   const value = useMemo(
@@ -58,9 +89,10 @@ export function AuthProvider({ children }) {
       user: auth.user,
       isAuthenticated: Boolean(auth.token),
       login,
+      updateUser,
       logout,
     }),
-    [auth, login, logout],
+    [auth, login, updateUser, logout],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
